@@ -1,0 +1,138 @@
+/* Typeform Styles */
+
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step.hidden {
+    display: none;
+}
+
+.form-step h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.form-group input,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+/* Progress Bar */
+
+
+.progress-bar {
+    height: 100%;
+    background: #4a90e2;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.progress-step {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-step.active {
+    background: #4a90e2;
+    color: white;
+}
+
+/* Success Message */
+.form-success {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.form-success h3 {
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.form-success p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    
+}

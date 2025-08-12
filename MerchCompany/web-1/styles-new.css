@@ -1,0 +1,318 @@
+/* Base Variables */
+:root {
+    /* Colors */
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --background-color: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #6c757d;
+    --dark-gray: #212529;
+    --border-color: #dee2e6;
+    
+    /* Font Families */
+    --font-heading: 'Quintessential', serif;
+    --font-body: 'Condiment', cursive;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    
+    /* Transitions */
+    --transition: all 0.2s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Typography */
+body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), serif;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 var(--spacing-sm);
+    color: var(--text-color);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+    margin: 0 0 var(--spacing-sm);
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 5%;
+    background-color: var(--background-color);
+}
+
+.logo h10 {
+    font-family: 'Ambroise Francois Std', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 400px;
+    background-color: var(--light-gray);
+}
+
+/* Button Styles */
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+}
+
+.button-front {
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.button:hover .button-front {
+    transform: translate(-2px, -2px);
+}
+
+.button-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e5e7eb;
+    border-radius: 4px;
+    z-index: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--light-gray);
+    padding: var(--spacing-xl) 5% var(--spacing-md);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo img {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-tagline {
+    margin-bottom: var(--spacing-md);
+    color: var(--medium-gray);
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.social-link {
+    color: var(--medium-gray);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+.footer-links-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-gray);
+}
+
+.footer-links-list {
+    list-style: none;
+}
+
+.footer-links-list li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-link {
+    color: var(--medium-gray);
+    transition: var(--transition);
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer-newsletter {
+    max-width: 300px;
+}
+
+.newsletter-form {
+    margin-top: var(--spacing-sm);
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-sans);
+}
+
+.newsletter-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-sans);
+}
+
+.newsletter-button:hover {
+    background-color: #1d4ed8;
+}
+
+.footer-bottom {
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.footer-copyright {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.footer-legal-link {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-legal-link:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer-legal-separator {
+    color: var(--medium-gray);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1.25rem;
+        --spacing-lg: 1.5rem;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
